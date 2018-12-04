@@ -14,8 +14,10 @@ fn read_file_to_vector(file_path: &str) -> Result<Vec<i64>, std::io::Error> {
 }
 
 fn main() {
-    let vec = read_file_to_vector("input1.txt");
+    let vec = read_file_to_vector("input1.txt").unwrap();
+    let mut sum: i64 = 0;
     for n in vec {
-        println!("n: {:?}", n);
+        sum  = sum + n;
     }
+    println!("la suma es: {:?}", sum);
 }
